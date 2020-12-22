@@ -6,7 +6,7 @@ import java.util.Map;
 import static java.lang.Math.min;
 
 public class CoinNum {
-    private static final int[] coins = {1,3};
+    private static final int[] coins = {2,5};
     static Map memo = new HashMap();
 
     static int coinNum(int amount){
@@ -28,14 +28,14 @@ public class CoinNum {
             if(subProblem==-1)continue;
             num = min(num,1+subProblem);
         }
-        if(num!=Integer.MAX_VALUE)
+        if(num!=Integer.MAX_VALUE&&num!=Integer.MIN_VALUE)
             memo.put(n,num);
         else
             memo.put(n,-1);
-        for()
+
         System.out.println(memo.keySet());
         System.out.println(memo.values());
-        return num>0?num:-1;
+        return (int)memo.get(n);
     }
 
 }

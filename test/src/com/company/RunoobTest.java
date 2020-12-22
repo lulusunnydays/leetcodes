@@ -6,9 +6,9 @@ import static java.lang.Math.min;
 
 public class RunoobTest {
     public static void main(String[] args) {
-        int money = 5;
+        int money = 13;
 
-        System.out.println(CoinNum.coinNum(money));
+        System.out.println("The RES:"+CoinNum.coinNum(money));
 
 
     }
